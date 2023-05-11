@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Ephesis&family=Lato:wght@300;700&family=Prata&display=swap');
+
+
+/****** TEXT SIZE ADJUST ******/
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+
+/****** BOX MODEL ******/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
+
+} 
+
+:root {
+    --primaryColor: #23cfa7;
+    --secundaryColor: #9b87b8;
+    --color-title: #001A49;
+  }  
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #116752;
+    font-style: italic;
+}
+/************GRID RULES********/
+.small-12{
+    width: 100%;
+}
+.column{
+    float: left; 
+    padding: 0 2vw;
+    margin: 0 0 .75rem 0;
+} /*las secciones se establecen como elementos flotantes a la izq*/
+
+.row{clear: both;} /*no se permiten elementos flotantes ni a la derecha ni a la izquierda de row haciendo que la clase limited cumpla su función*/
+
+.limited{
+    max-width: 1140px;
+    margin: auto;/*permite que se centre el contenido siempre*/ 
+ }/*centra en contenido*/
+
+/**********HEADER*************/
+header{
+    background-color:  #116752;
+    padding: 20px 0  ;
+}
+header h1, header h2 {
+    margin: 0;
+    color: #eee;
+    font-weight: 300;
+   
+}
+header h1 {
+    font-weight:bold ;
+}
+header h2 {
+    font-style: italic;
+}
+
+
+/**********PRIMARY NAV********/
+button#menubtn{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.4rem;
+    cursor: pointer;
+    padding: 0 30px 0 2vw;
+}
+nav{background-color: var(--primaryColor);}
+nav ul {margin: 0; padding: 0;}
+nav li {list-style-type: none;} 
+nav a {
+    display: block; 
+    padding: .8rem 0;
+    color:#eee;
+    text-align: center;
+    text-decoration: none;
+}
+nav li.active {background-color: rgba(0, 0, 0, 0.5);}
+nav a:hover {background-color: rgba(0, 0, 0, 0.2);} /*el que se elija se sombrea*/
+nav ul.open{display: block;}/*esta clase se agrega con js*/
+nav ul{display: none;}
+
+/************FOOTER***********/
+footer{
+    background-color: var(--secundaryColor);
+    color: #eee;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color:  #eee;
+}
+
+footer ul {
+    padding: 0;
+}
+footer li {
+    list-style: none;
+    display:inline;
+    padding: 1rem 1rem 1rem 0;
+   
+}
+
+
+.redes {
+    text-align: center;
+}
+
+.line {
+   
+    color: #eee;
+}
+/*cuando todas las secciones se definen como float el el footer, el nav y todo aquello que las englobe pasa a tener altura cero por lo que se pierde el color de fondo de ahi que se haga necesaria esta clase*/
+.clearfix:after {
+    content:" "; /*es importante el espacio que se deja entre las comollas*/
+    display: table;
+    clear: both;
+}/*Inserta contenido despues de elementos flotantes y previene que el footer colapse con el codigo de "grid rules"*/
+
+footer .button_style:hover {
+    background-color: var(--primaryColor);
+}
+
+footer input{
+    height: 42px;
+}
+
+/*--------------------------------------------------------------*/
+/*PORTADA*/
+/*--------------------------------------------------------------*/
+.portada{
+    padding: 3rem 0;
+    /* height: max-content; */
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/home.jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+}
+
+.portada_container{
+    max-width: 800px;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+    color: #eee;
+}
+
+.margin{
+    margin: 5rem 0;
+}
+
+.padding{
+    padding: 3rem 0;
+}
+
+.intro_title{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.intro_paragraph{
+    margin-bottom: 20px;
+    margin-bottom: 3rem;
+}
+
+.button_style{
+    display: inline-block;
+    background-color: var(--primaryColor);
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.button_style:hover{
+    background-color: var(--secundaryColor);
+}
+
+/*ABOUT*/
+.about{
+    text-align: center;
+}
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.about_paragraph{
+    line-height: 1.7; /*da separacion entre lineas del parrafo*/
+    
+}
+
+/*KNOWLEDGE*/
+
+.knowledge{
+    /*obtenido página magicpattern.desingn*/
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px); /*fin codigo copiado desde página*/
+    text-align: center;
+}
+
+
+.knowledge_figure{
+    max-width: 500px;
+}
+
+.knowledge_paragraph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+.knowledge_img{
+    width: 100%;
+    display: block ; /*esto evita problemas con espacios verticales*/
+    border-radius: 20%;
+}
+
+/*PREGUNTAS FRECUENTES*/
+.questions{
+    text-align: center;
+}
+
+.question_padding{
+    padding: 0;
+    transition: padding .2s;
+    border: 1px solid #5454D4;
+    border-radius: 6px;
+    margin: 20px 0;
+    
+
+}
+
+.questions_pading--add{
+    padding-bottom: 30px;
+}
+
+.question_answer{
+    padding: 0 30px 0 30px;
+    overflow: hidden;
+
+}
+
+.question_title{
+    display: flex;
+    font-size: 20px;
+    padding: 10px 0 10px;
+    cursor: pointer;
+    color: var(--color-title);
+    justify-content: space-between;
+     
+}
+
+ .question_img{
+    display: block;
+}
+
+.question_arrow{
+    border-radius: 50%;
+    background-color: var(--color-title);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-left: 10px;
+    transition: transform .3s;
+
+}
+
+
+
+.questions_arrow--rotate{
+    transform: rotate(180deg);
+}
+
+.question_show{
+    text-align: left;
+    height: 0px;
+    transition: height .3s; /*transicion para a propiedad height*/
+    margin: 0;
+    
+}
+ 
+
+.question_copy{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.title_paragrapg_style{
+    font-size: 2rem;
+}
+
+.frase_style{
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+}
+
+.img_arbusto{
+    margin-bottom: 50px;
+    padding-right: 170px;
+    zoom: 0.5;
+}
+
+.div_arbusto{
+   margin-bottom: 100px;
+}
+
+/*-------------------------------------------------------------*/
+/*FIN PORTADA*/
+/*--------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------*/
+/*BLOG*/
+/*--------------------------------------------------------------*/
+
+.figure_entry{
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0;
+    
+}
+.img_entry{
+   width: 100%;
+   height: 100%;
+   margin: 0;
+}
+
+.link_entry{
+   color: #444cf7;
+}
+
+h2 a {
+    text-decoration: none;
+}
+
+.description{
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0;
+}
+
+figure p {
+    font-size: 0.7rem;
+}
+
+figure a{
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+
+.line-right {
+    border-right: solid 1px rgb(231, 231, 231) ;
+}
+
+.labeled {
+    margin: 0;
+    width: 100%;
+    height: 0;
+}
+
+.input_buscar{
+    height: 42px;
+}
+
+
+/*-------------------------------------------------------------*/
+/*FIN BLOG*/
+/*--------------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*SOBRE MI */
+/*-------------------------------------------------------*/
+
+.figure_sobremi{
+    max-width: 400px;
+    max-height:400px
+    
+}
+
+.img_sobremi{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.frase{
+    text-align: center;
+    font-family: 'Prata', serif;
+    font-size: 2rem;
+    color: #116752;
+    
+}
+.bg_sobremi{
+    background-color: #eee;
+}
+
+.style{
+    color: #116752;
+    font-family: 'Prata', serif;
+}
+.paragraph_sobremi{
+    margin-top: 65px;
+}
+
+.padding_lateral{
+    padding: 0 .5em;
+}

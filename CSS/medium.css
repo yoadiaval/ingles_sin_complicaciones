@@ -1,0 +1,16 @@
+@media only screen and (min-width: 768px){
+.medium-6{
+    width: 50%
+}
+
+.alineado:nth-child(2n+1){clear: left;}  /*Evita que el page BLOG hayan espacios entre los artículos*/
+
+nav button {display: none;}
+    nav ul {display: block;}
+    nav li {
+        float: left;
+        width: 25%;
+    }
+
+
+}
