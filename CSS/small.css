@@ -425,3 +425,8 @@ figure a{
 .padding_lateral{
     padding: 0 .5em;
 }
+
+
+.filtro{
+    display: none;
+}
