@@ -188,20 +188,37 @@ footer input{
     background-color: var(--secundaryColor);
 }
 
+.btn_animation{
+ animation-name: cambiarScala;
+ animation-duration: 3s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+}
+@keyframes cambiarScala{
+   0%{transform: scale(0.5);}
+   20%{transform: scale(0.5);}
+   40%{transform: scale(0.5);}
+   60%{transform: scale(0.5);}
+   80%{transform: scale(0.5);}
+   100%{transform: scale(0.5);}
+
+}
+
+
+
 /*ABOUT*/
 .about{
     text-align: center;
 }
 
 .subtitle{
-    color: var(--color-title);
+    color: var(--color-title); 
     font-size: 2rem;
     margin-bottom: 40px;
 }
 
 .about_paragraph{
     line-height: 1.7; /*da separacion entre lineas del parrafo*/
-    
 }
 
 /*KNOWLEDGE*/
