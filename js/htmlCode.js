@@ -35,3 +35,19 @@ const footer = document.createElement("footer");
 footer.innerHTML = contentFooter;
 footer.classList.add("clearfix");
 document.querySelector("body").append(footer);
+
+
+//----------------ENTRADAS RECIENTES------------------------------------//
+
+const RecentEntries = `
+<h2>Entradas recientes</h2>
+<ul>
+    <li><a href="./shdowing_que_es_como_practicarlo.html">Shadowing, qué es y cómo practicarlo.</a></li>
+    <li><a href="./consejos_mejorar_tu_listening.html">Consejos para mejorar tu listening</a></li>
+    <li><a href="./estudiar_ingles_autodidacta_o_pagar_clases.html">Estudiar inglés de forma autodidacta o pagar por clases</a></li>
+    <li><a href="./como_practicar_listening.html">¿Cómo puedo practicar listening?</a></li>
+</ul>
+`;
+
+document.querySelector(".sidebar_blog").innerHTML = RecentEntries;
+

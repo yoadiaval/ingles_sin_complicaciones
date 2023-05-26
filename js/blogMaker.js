@@ -91,3 +91,5 @@ arr.forEach(item=>{
     const entry_section = document.querySelector(".entry_section");
     entry_section.append(div);
 });
+
+ 
