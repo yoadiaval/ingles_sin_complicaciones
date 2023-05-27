@@ -325,6 +325,10 @@ footer input{
 
 }
 
+.question_arrow:hover{
+    animation-play-state: paused;
+}
+
 @keyframes move_down{
     from{transform: translateY(0);}
     to{transform: translateY(10%);}
