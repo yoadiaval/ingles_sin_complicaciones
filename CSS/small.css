@@ -182,12 +182,28 @@ footer input{
     padding: 13px 30px;
     border-radius: 5px;
     border: none;
+    
+    /*animaciones*/
+    animation-name: changeScale;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.button_style:hover{
+    animation-play-state: paused;
+}
+
+@keyframes changeScale{
+    from{transform: scale(100%);}
+    to{transform: scale(105%);}
 }
 
 .button_style:hover{
     background-color: var(--secundaryColor);
 }
 
+/*
 .btn_animation{
  animation-name: cambiarScala;
  animation-duration: 3s;
@@ -203,7 +219,7 @@ footer input{
    100%{transform: scale(0.5);}
 
 }
-
+*/
 
 
 /*ABOUT*/
@@ -284,7 +300,10 @@ footer input{
 
  .question_img{
     display: block;
+    transform: rotate(180deg);
+   
 }
+
 
 .question_arrow{
     border-radius: 50%;
@@ -298,8 +317,18 @@ footer input{
     margin-left: 10px;
     transition: transform .3s;
 
+     /*animaciones*/
+     animation-name: move_down;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+     animation-duration: 0.5s;
+
 }
 
+@keyframes move_down{
+    from{transform: translateY(0);}
+    to{transform: translateY(10%);}
+}
 
 
 .questions_arrow--rotate{
